@@ -51,7 +51,7 @@ por lo que deberán unir los cambios con frecuencia.
 A continuación la descripción de las clases, sus responsabilidades de hacer y de
 conocer, y sus colaboraciones.
 
-## 1. **Clase [`Dish`](./src/Dish.cs)**
+## 1. **Clase `Dish`**
 
 Representa un platillo individual en el menú del restaurante.
 
@@ -68,7 +68,7 @@ Representa un platillo individual en el menú del restaurante.
 
 Aquí está el código provisto de la clase [`Dish`](./src/Dish.cs).
 
-## 2. **Clase [`Menu`](./src/Menu.cs)**
+## 2. **Clase `Menu`**
 
 Representa el conjunto de platillos disponibles en el restaurante.
 
@@ -87,7 +87,7 @@ Representa el conjunto de platillos disponibles en el restaurante.
 > [!TIP]
 > Puedes acceder al i-ésimo elemento de la variable de instancia `dishes` con
 > `dishes[i]` y las estructuras de repetición condicional que consideres
-> apropiada. También puedes recorrer los platillos en esa variable de instancia
+> apropiadas. También puedes recorrer los platillos en esa variable de instancia
 > con la estructura repetitiva condicional `foreach`.
 
 Aquí está el código provisto de la clase [`Menu`](./src/Menu.cs).
@@ -107,7 +107,11 @@ Representa una mesa en el restaurante.
   * `Occupy()`: Marca la mesa como ocupada.
   * `Free()`: Libera la mesa y vacía la lista de pedidos.
   * `AddOrder(Dish)`: Agrega un platillo a la lista de pedidos.
-  * `bool HasOrders()`: Returna `true` si la mesa tiene pedidos y `false` en caso contrario.
+  * `bool HasOrders()`: Returna `true` si la mesa tiene pedidos y `false` en
+    caso contrario.
+
+> [!TIP]
+> El método `Clear()` de la clase `ArrayList` vacía la lista.
 
 > [!IMPORTANT]
 > Debe ser posible crear una instancia de `Table` e inicializar sus propiedades
@@ -115,7 +119,7 @@ Representa una mesa en el restaurante.
 
 Aquí está el código provisto de la clase [`Table`](./src/Table.cs).
 
-## 4. **Clase [`Waiter`](./src/Waiter.cs)**
+## 4. **Clase `Waiter`**
 
 Representa un mozo en el restaurante, encargado de atender mesas.
 
