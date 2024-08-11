@@ -44,7 +44,7 @@ por lo que deberán unir los cambios con frecuencia.
 > casos de prueba para comprobar la implementación. Para ejecutar los casos de
 > prueba ejecuten el comando `Run All Tests from Solution` en el menú `Tests` de
 > Rider. Deberían ver una imagen como la siguiente si todo funcionó bien:
-> <img src="/assets/image.png" alt="Resultado de las pruebas" width="259" />
+> <img src="/assets/image.png" alt="Resultado de las pruebas" width="345" />
 
 ## Clases a implementar
 
