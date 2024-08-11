@@ -11,9 +11,10 @@ width="150"/>
 
 ## Objetivo
 
-Implementar en C# las clases indicadas a continuación, con sus responsabilidades
-y colaboraciones también indicadas a continuación. Cada clase debe ser agregada
-por un estudiante diferente y deben trabajar en ramas diferentes.
+Completar la implementación en C# las clases indicadas a continuación, con sus
+responsabilidades y colaboraciones también indicadas a continuación. Cada clase
+debe ser agregada por un estudiante diferente y deben trabajar en ramas
+diferentes.
 
 ## Pasos
 
@@ -55,12 +56,31 @@ conocer, y sus colaboraciones.
 
 Representa un platillo individual en el menú del restaurante.
 
+<table>
+  <tr>
+    <th colspan="2">
+      Dish
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Conocer el nombre del platillo<br>
+      Conocer el precio del platillo<br>
+      Conoce si el platillo es vegetariano o no<br>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+
 * Responsabilidades de conocer:
-  * **Name**: Conoce el nombre del platillo.
-  * **Price**: Conoce el precio del platillo.
-  * **IsVegetarian**: Conoce si el platillo es vegetariano o no.
+  * **Name**: Conocer el nombre del platillo.
+  * **Price**: Conocer el precio del platillo.
+  * **IsVegetarian**: Conocer si el platillo es vegetariano o no.
 
 * No tiene responsabilidades de hacer.
+
+* No tiene colaboradores.
 
 > [!IMPORTANT]
 > Debe ser posible crear una instancia de `Dish` e inicializar sus propiedades
@@ -72,17 +92,38 @@ Aquí está el código provisto de la clase [`Dish`](./src/Dish.cs).
 
 Representa el conjunto de platillos disponibles en el restaurante.
 
+<table>
+  <tr>
+    <th colspan="2">
+      Menu
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Conocer la lista de platillos disponibles en el restaurante<br>
+      Agregar un platillo a la lista de platillos del menú<br>
+      Eliminar un platillo de la lista del menú<br>
+      Buscar y devolver un platillo específico del menú basado en su nombre<br>
+    </td>
+    <td>
+      Dish
+    </td>
+  </tr>
+</table>
+
 * Responsabilidades de conocer:
-  * `dishes`: Conoce la lista de platillos disponibles en el restaurante;
+  * `dishes`: Conocer la lista de platillos disponibles en el restaurante;
     esta responsabilidad está ya implementada con la variable de instancia
     `dishes` en el código provisto.
 
 * Responsabilidades de hacer
-  * `AddDish(Dish)`: Agrega un platillo a la lista de platillos del menú.
-  * `RemoveDish(Dish)`: Elimina un platillo de la lista del menú
-    basado en su nombre.
-  * `Dish GetDishByName(string)`: Busca y devuelve un platillo específico del
+  * `AddDish(Dish)`: Agregar un platillo a la lista de platillos del menú.
+  * `RemoveDish(Dish)`: Eliminar un platillo de la lista del menú.
+  * `Dish GetDishByName(string)`: Buscar y devolver un platillo específico del
     menú basado en su nombre; retorna `null` si no encuentra en platillo.
+
+* Colaboradores
+  * Dish
 
 > [!TIP]
 > Puedes acceder al i-ésimo elemento de la variable de instancia `dishes` con
@@ -96,19 +137,43 @@ Aquí está el código provisto de la clase [`Menu`](./src/Menu.cs).
 
 Representa una mesa en el restaurante.
 
+<table>
+  <tr>
+    <th colspan="2">
+      Table
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Conocer el número identificador de la mesa<br>
+      Conocer si la mesa está ocupada o no<br>
+      Conocer la lista de platillos que han sido pedidos en la mesa<br>
+      Marcar la mesa como ocupada<br>
+      Liberar la mesa y vaciar la lista de pedidos<br>
+      Determinar si la mesa tiene pedidos o no<br>
+    </td>
+    <td>
+      Dish
+    </td>
+  </tr>
+</table>
+
 * Responsabilidades de conocer:
-  * `Number`: Conoce el número identificador de la mesa.
-  * `IsOccupied`: Conoce si la mesa está ocupada o no.
-  * `Order`**`: Conoce la lista de platillos que han sido pedidos en la mesa;
+  * `Number`: Conocer el número identificador de la mesa.
+  * `IsOccupied`: Conocer si la mesa está ocupada o no.
+  * `Order`**`: Conocer la lista de platillos que han sido pedidos en la mesa;
     esta responsabilidad está ya implementada con la variable de instancia
     `order` en el código provisto.
 
 * Responsabilidades de hacer:
-  * `Occupy()`: Marca la mesa como ocupada.
-  * `Free()`: Libera la mesa y vacía la lista de pedidos.
-  * `AddOrder(Dish)`: Agrega un platillo a la lista de pedidos.
-  * `bool HasOrders()`: Returna `true` si la mesa tiene pedidos y `false` en
-    caso contrario.
+  * `Occupy()`: Marcar la mesa como ocupada.
+  * `Free()`: Liberar la mesa y vaciar la lista de pedidos.
+  * `AddOrder(Dish)`: Agregar un platillo a la lista de pedidos.
+  * `bool HasOrders()`: Determinar si la mesa tiene pedidos o no; retorna `true`
+    si los tiene y `false` en caso contrario.
+
+* Colaboradores:
+  * Dish
 
 > [!TIP]
 > El método `Clear()` de la clase `ArrayList` vacía la lista.
@@ -123,16 +188,41 @@ Aquí está el código provisto de la clase [`Table`](./src/Table.cs).
 
 Representa un mozo en el restaurante, encargado de atender mesas.
 
+<table>
+  <tr>
+    <th colspan="2">
+      Waiter
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Conocer el nombre del mozo<br>
+      Conocer las mesas asignadas al mozo<br>
+      Asignar una mesa al mozo<br>
+      Tomar un pedido para una mesa específica y agregar el platillo a la orden
+      de esa mesa<br>
+    </td>
+    <td>
+      Dish<br>
+      Table<br>
+    </td>
+  </tr>
+</table>
+
 * Responsabilidades de conocer:
-  * `Name`: Conoce el nombre del mozo.
-  * `assignedTables`: Conoce las mesas asignadas al mozo; esta responsabilidad
+  * `Name`: Conocer el nombre del mozo.
+  * `assignedTables`: Conocer las mesas asignadas al mozo; esta responsabilidad
     está ya implementada con la variable de instancia `assignedTables` en el
     código provisto.
 
 * Responsabilidades de hacer:
-  * `AssignTable(Table)`: Asigna una mesa al camarero.
-  * `TakeOrder(Table, Dish)`: Toma un pedido para una mesa específica
-    y agrega el platillo a la orden de esa mesa.
+  * `AssignTable(Table)`: Asignar una mesa al mozo.
+  * `TakeOrder(Table, Dish)`: Tomar un pedido para una mesa específica
+    y agregar el platillo a la orden de esa mesa.
+
+* Colaboradores:
+  * Dish
+  * Table
 
 > [!IMPORTANT]
 > Debe ser posible crear una instancia de `Waiter` e inicializar sus propiedades
