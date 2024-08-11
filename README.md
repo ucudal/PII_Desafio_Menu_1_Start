@@ -1,22 +1,52 @@
+<img alt="UCU" src="https://www.ucu.edu.uy/plantillas/images/logo_ucu.svg"
+width="150"/>
 
-Uno de los estudiantes del equipo crea un repositorio privado a partir de este
-repositorio plantilla haciendo clic en el botón `Use this template` y luego en
-el comando `Create new repository`.
+# Universidad Católica del Uruguay
 
-El estudiante que creó el repositorio agrega a los demás integrantes del equipo
-haciendo clic en `Settings`, `Collaborators and Teams`, `Add people` para cada
-uno de los miembros del equipo, usando sus nombres de usuario.
+## Facultad de Ingeniería y Tecnologías
 
-Todos clonan el repositorio creado a sus equipos.
+### Programación II
 
-Todos crean una rama con el nombre que quieran, la única condición es que deben
-ser diferentes para cada miembro del equipo.
+# Desafío menú #1: Restaurante simple
 
-Distribuyan las siguientes clases entre los miembros del equipo. Cada miembro
+## Objetivo
+
+Implementar en C# las clases indicadas a continuación, con sus responsabilidades
+y colaboraciones también indicadas a continuación. Cada clase debe ser agregada
+por un estudiante diferente y deben trabajar en ramas diferentes.
+
+## Pasos
+
+1. Uno de los estudiantes del equipo crea un repositorio privado a partir de
+este repositorio plantilla haciendo clic en el botón `Use this template` y luego
+en el comando `Create new repository`.
+
+2. El estudiante que creó el repositorio agrega a los demás integrantes del
+equipo haciendo clic en `Settings`, `Collaborators and Teams`, `Add people` para
+cada uno de los miembros del equipo, usando sus nombres de usuario.
+
+3. Todos clonan el repositorio creado a sus equipos.
+
+4. Todos crean una rama con el nombre que quieran, la única condición es que
+deben ser diferentes para cada miembro del equipo.
+
+5. Distribuyan las siguientes clases entre los miembros del equipo. Cada miembro
 implementa una clase diferente.
 
-El código no va a funcionar hasta que integren el trabajo en la rama `main`, por
-lo que deberán unir los cambios con frecuencia.
+6. El código no va a funcionar hasta que integren el trabajo en la rama `main`,
+por lo que deberán unir los cambios con frecuencia.
+
+> [!IMPORTANT]
+> Para compilar el código en Rider usen el comando `Build Solution` del menú
+> `Build`.
+>
+> Aunque todavía no vamos a ver cómo hacer casos de prueba, este repositorio usa
+> casos de prueba para comprobar la implementación. Para ejecutar los casos de
+> prueba ejecuten el comando `Run All Tests from Solution` en el menú `Tests` de
+> Rider. Deberían ver una imagen como la siguiente si todo funcionó bien:
+> <img src="/assets/image.png" alt="Resultado de las pruebas" width="259" />
+
+## Clases a implementar
 
 A continuación la descripción de las clases, sus responsabilidades de hacer y de
 conocer, y sus colaboraciones.
@@ -32,9 +62,15 @@ Representa un platillo individual en el menú del restaurante.
 
 * No tiene responsabilidades de hacer.
 
+> [!IMPORTANT]
+> Debe ser posible crear una instancia de `Dish` e inicializar sus propiedades
+> en una sola operación.
+
+Aquí está el código provisto de la clase [`Dish`](./src/Dish.cs).
+
 ## 2. **Clase [`Menu`](./src/Menu.cs)**
 
-Representa el conjunto de platillos Dish disponibles en el restaurante.
+Representa el conjunto de platillos disponibles en el restaurante.
 
 * Responsabilidades de conocer:
   * `dishes`: Conoce la lista de platillos disponibles en el restaurante;
@@ -54,6 +90,8 @@ Representa el conjunto de platillos Dish disponibles en el restaurante.
 > apropiada. También puedes recorrer los platillos en esa variable de instancia
 > con la estructura repetitiva condicional `foreach`.
 
+Aquí está el código provisto de la clase [`Menu`](./src/Menu.cs).
+
 ## 3. **Clase [`Table`](./src/Table.cs)**
 
 Representa una mesa en el restaurante.
@@ -69,6 +107,13 @@ Representa una mesa en el restaurante.
   * `Occupy()`: Marca la mesa como ocupada.
   * `Free()`: Libera la mesa y vacía la lista de pedidos.
   * `AddOrder(Dish)`: Agrega un platillo a la lista de pedidos.
+  * `bool HasOrders()`: Returna `true` si la mesa tiene pedidos y `false` en caso contrario.
+
+> [!IMPORTANT]
+> Debe ser posible crear una instancia de `Table` e inicializar sus propiedades
+> en una sola operación.
+
+Aquí está el código provisto de la clase [`Table`](./src/Table.cs).
 
 ## 4. **Clase [`Waiter`](./src/Waiter.cs)**
 
@@ -84,3 +129,9 @@ Representa un mozo en el restaurante, encargado de atender mesas.
   * `AssignTable(Table)`: Asigna una mesa al camarero.
   * `TakeOrder(Table, Dish)`: Toma un pedido para una mesa específica
     y agrega el platillo a la orden de esa mesa.
+
+> [!IMPORTANT]
+> Debe ser posible crear una instancia de `Waiter` e inicializar sus propiedades
+> en una sola operación.
+
+Aquí está el código provisto de la clase [`Waiter`](./src/Waiter.cs).
