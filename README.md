@@ -161,7 +161,7 @@ Representa una mesa en el restaurante.
 * Responsabilidades de conocer:
   * `Number`: Conocer el número identificador de la mesa.
   * `IsOccupied`: Conocer si la mesa está ocupada o no.
-  * `Order`**`: Conocer la lista de platillos que han sido pedidos en la mesa;
+  * `Order`: Conocer la lista de platillos que han sido pedidos en la mesa;
     esta responsabilidad está ya implementada con la variable de instancia
     `order` en el código provisto.
 
