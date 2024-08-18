@@ -147,9 +147,10 @@ Representa una mesa en el restaurante.
     <td>
       Conocer el número identificador de la mesa<br>
       Conocer si la mesa está ocupada o no<br>
-      Conocer la lista de platillos que han sido pedidos en la mesa<br>
+      Conocer la lista de platillos que han sido ordenados en la mesa<br>
       Marcar la mesa como ocupada<br>
       Liberar la mesa y vaciar la lista de pedidos<br>
+      Agregar un platillo a los que han sido ordenados en la mesa<br>
       Determinar si la mesa tiene pedidos o no<br>
     </td>
     <td>
@@ -168,7 +169,7 @@ Representa una mesa en el restaurante.
 * Responsabilidades de hacer:
   * `Occupy()`: Marcar la mesa como ocupada.
   * `Free()`: Liberar la mesa y vaciar la lista de pedidos.
-  * `AddOrder(Dish)`: Agregar un platillo a la lista de pedidos.
+  * `AddToOrder(Dish)`: Agregar un platillo a la lista de pedidos.
   * `bool HasOrders()`: Determinar si la mesa tiene pedidos o no; retorna `true`
     si los tiene y `false` en caso contrario.
 

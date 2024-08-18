@@ -37,7 +37,7 @@ public class TableTests
         table.Ocupy();
         Dish dish = new Dish("Salad", 5.99, true);
         
-        table.AddOrder(dish);
+        table.AddToOrder(dish);
         
         Assert.That(table.HasOrders(), Is.True);
     }
@@ -48,7 +48,7 @@ public class TableTests
         Table table = new Table(1);
         table.Ocupy();
         Dish dish = new Dish("Salad", 5.99, true);
-        table.AddOrder(dish);
+        table.AddToOrder(dish);
         
         table.Free();
         
