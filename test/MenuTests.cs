@@ -1,45 +1,48 @@
-namespace Ucu.Poo.Restaurant.Tests;
+using NUnit.Framework;
 
-[TestFixture]
-public class MenuTests
+namespace Ucu.Poo.Restaurant.Tests
 {
-    [Test]
-    public void AddDish_WithValidDish_AddsDish()
+    [TestFixture]
+    public class MenuTests
     {
-        const string name = "Salad";
-        Dish dish = new Dish(name, 5.99, true);
-        Menu menu = new Menu();
+        [Test]
+        public void AddDish_WithValidDish_AddsDish()
+        {
+            const string name = "Salad";
+            Dish dish = new Dish(name, 5.99, true);
+            Menu menu = new Menu();
 
-        menu.AddDish(dish);
+            menu.AddDish(dish);
 
-        Dish foundDish = menu.GetDishByName(name);
-        Assert.That(foundDish, Is.EqualTo(dish));
-    }
-    
-    [Test]
-    public void RemoveDish_WithValidDish_RemovesDish()
-    {
-        const string name = "Salad";
-        Dish dish = new Dish(name, 5.99, true);
-        Menu menu = new Menu();
+            Dish foundDish = menu.GetDishByName(name);
+            Assert.That(foundDish, Is.EqualTo(dish));
+        }
 
-        menu.AddDish(dish);
-        menu.RemoveDish(dish);
+        [Test]
+        public void RemoveDish_WithValidDish_RemovesDish()
+        {
+            const string name = "Salad";
+            Dish dish = new Dish(name, 5.99, true);
+            Menu menu = new Menu();
 
-        Dish foundDish = menu.GetDishByName(name);
-        Assert.That(foundDish, Is.Null);
-    }
-    
-    [Test]
-    public void GetDishByName_WithInvalidDish_ReturnsNull()
-    {
-        const string name = "Salad";
-        Dish dish = new Dish(name, 5.99, true);
-        Menu menu = new Menu();
-        menu.AddDish(dish);
+            menu.AddDish(dish);
+            menu.RemoveDish(dish);
 
-        Dish foundDish = menu.GetDishByName("Burger");
-        
-        Assert.That(foundDish, Is.Null);
+            Dish foundDish = menu.GetDishByName(name);
+            Assert.That(foundDish, Is.Null);
+        }
+
+        [Test]
+        public void GetDishByName_WithInvalidDish_ReturnsNull()
+        {
+            const string name = "Salad";
+            Dish dish = new Dish(name, 5.99, true);
+            Menu menu = new Menu();
+            menu.AddDish(dish);
+
+            Dish foundDish = menu.GetDishByName("Burger");
+
+            Assert.That(foundDish, Is.Null);
+        }
     }
 }

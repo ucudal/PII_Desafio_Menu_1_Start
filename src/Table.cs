@@ -1,15 +1,17 @@
-namespace Ucu.Poo.Restaurant;
-
 using System.Collections;
 
-/// <summary>
-/// Representa una mesa en el restaurante.
-/// </summary>
-public class Table
+namespace Ucu.Poo.Restaurant
 {
-    private ArrayList order = new ArrayList();
-    public bool HasOrders()
+    /// <summary>
+    /// Representa una mesa en el restaurante.
+    /// </summary>
+    public class Table
     {
-        return this.order.Count > 0;
+        private ArrayList order = new ArrayList();
+
+        public bool HasOrders()
+        {
+            return this.order.Count > 0;
+        }
     }
 }
