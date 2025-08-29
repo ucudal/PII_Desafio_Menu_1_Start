@@ -1,4 +1,4 @@
-using System.Collections;
+using System.Collections.Generic;
 
 namespace Ucu.Poo.Restaurant
 {
@@ -8,6 +8,6 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Menu
     {
-        private ArrayList dishes = new ArrayList();
+        private List<Dish> dishes = new List<Dish>();
     }
 }
