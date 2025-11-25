@@ -12,7 +12,9 @@ width="150"/>
 ## Objetivo
 
 Completar la implementación en C# las clases indicadas a continuación, con sus
-responsabilidades y colaboraciones, también indicadas a continuación. Cada clase
+responsabilidades y colaboraciones, también indicadas a continuación.
+
+<!-- Cada clase
 debe ser agregada por un estudiante diferente y deben trabajar en ramas
 diferentes.
 
@@ -40,15 +42,15 @@ por lo que deberán unir los cambios con frecuencia.
 > [!IMPORTANT]
 > Para compilar el código en Rider usen el comando `Build Solution` del menú
 > `Build`.
-> 
+>
 > También pueden ejecutar el comando `dotnet test` en la consola.
 >
 > Aunque todavía no vamos a ver cómo hacer casos de prueba, este repositorio usa
 > casos de prueba para comprobar la implementación. Para ejecutar los casos de
 > prueba ejecuten el comando `Run All Tests from Solution` en el menú `Tests` de
 > Rider. Deberían ver una imagen como la siguiente si todo funcionó bien:
-> 
-> <img src="/assets/image.png" alt="Resultado de las pruebas" width="345" />
+>
+> <img src="/assets/image.png" alt="Resultado de las pruebas" width="345" /> -->
 
 ## Clases a implementar
 
